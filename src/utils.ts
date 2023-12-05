@@ -2,6 +2,7 @@ import { Request } from "express";
 
 const USER_API_URL = process.env.USER_API_URL || 'http://localhost:8001';
 const VIDEO_API_URL = process.env.VIDEO_API_URL || 'http://localhost:8002';
+const ADMIN_API_URL = process.env.ADMIN_API_URL || 'http://localhost:8003';
 
 
 const getUrl = (req: Request) => {
@@ -19,7 +20,9 @@ const getHost = (req: Request) => {
         return VIDEO_API_URL;
     } else if (req.baseUrl.match('/userservice')) {
         return USER_API_URL;
-    }
+    } else if (req.baseUrl.match('/adminservice')) {
+        return ADMIN_API_URL;
+    }    
     else {
         return ''
     }
