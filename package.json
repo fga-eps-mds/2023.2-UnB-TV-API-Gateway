@@ -1,0 +1,39 @@
+{
+	"name": "2023.2-unb-tv-api-gateway",
+	"version": "1.0.0",
+	"description": "UnB TV API Gateway",
+	"main": "index.js",
+	"scripts": {
+		"dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+		"build": "rimraf ./dist && tsc",
+		"test": "jest --passWithNoTests --no-cache --runInBand",
+		"test:prod": "CI=true npm t -- --coverage"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.3.1",
+		"express": "^4.18.2",
+		"express-http-proxy": "^2.0.0"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.17",
+		"@types/dotenv": "^8.2.0",
+		"@types/express": "^4.17.21",
+		"@types/express-http-proxy": "^1.6.6",
+		"@types/jest": "^29.5.10",
+		"@types/node": "^20.10.3",
+		"@types/supertest": "^2.0.16",
+		"jest": "^29.7.0",
+		"jest-mock-extended": "^3.0.5",
+		"jest-sonar": "^0.2.16",
+		"rimraf": "^5.0.5",
+		"supertest": "^6.3.3",
+		"ts-jest": "^29.1.1",
+		"ts-node": "^10.9.1",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^5.3.2"
+	}
+}
