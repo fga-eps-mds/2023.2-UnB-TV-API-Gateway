@@ -7,7 +7,7 @@
 		"dev": "ts-node-dev --respawn --transpile-only src/index.ts",
 		"build": "rimraf ./dist && tsc",
 		"test": "jest --passWithNoTests --no-cache --runInBand",
-		"test:coverage": "CI=true npm t -- --coverage"
+		"test:prod": "CI=true npm t -- --coverage"
 	},
 	"keywords": [],
 	"author": "",
